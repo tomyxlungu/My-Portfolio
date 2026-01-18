@@ -110,13 +110,25 @@ contactForm.addEventListener('submit', (e) => {
 
 // Parallax effect for hero section
 const hero = document.querySelector('.hero');
+let targetY = 0;
+let currentY = 0;
+const ease = 0.06; // slower for more buttery smoothness
+const maxParallax = 80; // clamp max movement
 
-window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
+if (hero) {
+    hero.style.willChange = 'transform'; // GPU optimize
+}
+
+function smoothParallax() {
+    targetY = Math.min(window.scrollY * 0.27, maxParallax);
+    currentY += (targetY - currentY) * ease;
     if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        hero.style.transform = `translateY(${currentY}px)`;
     }
-});
+    requestAnimationFrame(smoothParallax);
+}
+
+smoothParallax();
 
 // Add hover effect sound/visual feedback for project items
 const projectItems = document.querySelectorAll('.project-item');

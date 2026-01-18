@@ -39,12 +39,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 65px;
+    height: 60px;
 }
 
 .logo {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2px;
     text-decoration: none;
     color: #000;
@@ -53,18 +53,6 @@ body {
 
 .logo:hover {
     opacity: 0.7;
-}
-
-.blog-page {
-    padding: 10px 20px;
-    border: 1px solid black;
-    background: white;
-    border-radius: 100px;
-}
-
-.blog-page a {
-    color: black;
-    text-decoration: none;
 }
 
 .nav-menu {
@@ -132,7 +120,6 @@ body {
     justify-content: center;
     text-align: center;
     padding: 100px 20px;
-    border-bottom: 1px solid #000;
 }
 
 .hero-title {
@@ -262,16 +249,12 @@ section {
 }
 
 .project-image {
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
     background: #f5f5f5;
     border: 1px solid #000;
     margin-bottom: 20px;
     overflow: hidden;
     transition: all 0.3s ease;
-}
-
-.project-image img {
-    width: 100%;
 }
 
 .project-item:hover .project-image {
@@ -288,26 +271,14 @@ section {
     color: #999;
 }
 
-.project-info h3 a {
-    text-decoration: none;
-    color: #000;
+.project-info h3 {
     font-size: 1.3rem;
-    margin-bottom: 5px;
-}
-
-.project-info h3 a:hover {
-    color: #999;
+    margin-bottom: 8px;
 }
 
 .project-info p {
     color: #666;
     font-size: 0.95rem;
-    margin-bottom: 8px;
-}
-
-.project-info p span {
-    font-weight: 500;
-    color: #333;
 }
 
 /* Testimonials Section */
@@ -420,7 +391,7 @@ section {
 
 /* Footer */
 .footer {
-    padding: 17px 20px;
+    padding: 40px 20px;
     background: #000;
     color: #fff;
 }
@@ -566,4 +537,13 @@ section {
     .about-text .lead, .contact-info .lead {
         font-size: 1rem;
     }
+}
+
+.project-item,
+.testimonial-item,
+.skill-item,
+.section-title {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
 }
