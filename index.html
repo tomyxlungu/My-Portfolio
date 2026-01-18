@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas | Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "U7x-M3OgcdRzWluI1",
+        });
+    })();
+</script>
 </head>
 <body>
     <!-- Navigation -->
@@ -19,7 +30,6 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#work" class="nav-link">Work</a></li>
                 <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -66,29 +76,29 @@
             <div class="projects-grid">
                 <div class="project-item">
                     <div class="project-image">
-                        <div class="placeholder">Project Image</div>
+                        <img src="assets /pic one.png" alt="BELLISSIMÀ project image" style="width:100%;height:auto;display:block;object-fit:cover;" />
                     </div>
                     <div class="project-info">
-                        <h3>BELLISSIMÀ</h3>
+                        <h3><a href="https://tomyxlungu.github.io/BELLISSIMA/" target="_blank" rel="noopener">BELLISSIMÀ</a></h3>
                         <p>Brand Identity, Web Design</p>
                     </div>
                 </div>
                 <div class="project-item">
                     <div class="project-image">
-                        <div class="placeholder">Project Image</div>
+                        <div class="placeholder">Comming Soon</div>
                     </div>
                     <div class="project-info">
-                        <h3>Project Title Two</h3>
-                        <p>UI/UX, Development</p>
+                        <h3>Project Title ...</h3>
+                        <p>...</p>
                     </div>
                 </div>
                 <div class="project-item">
                     <div class="project-image">
-                        <div class="placeholder">Project Image</div>
+                        <div class="placeholder">Comming Soon</div>
                     </div>
                     <div class="project-info">
-                        <h3>Project Title Five</h3>
-                        <p>Mobile App, UI Design</p>
+                        <h3>Project Title ...</h3>
+                        <p>...</p>
                     </div>
                 </div>
             </div>
@@ -103,22 +113,8 @@
                 <div class="testimonial-item">
                     <p class="testimonial-text">"Outstanding work! The attention to detail and creative vision exceeded all our expectations. Highly professional and delivered on time."</p>
                     <div class="testimonial-author">
-                        <strong>Sarah Johnson</strong>
-                        <span>CEO, Tech Startup</span>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <p class="testimonial-text">"A true professional who understands both design and development. The project was seamless from start to finish."</p>
-                    <div class="testimonial-author">
-                        <strong>Michael Chen</strong>
-                        <span>Creative Director, Agency</span>
-                    </div>
-                </div>
-                <div class="testimonial-item">
-                    <p class="testimonial-text">"Exceptional talent with an eye for modern design. Our new website has increased engagement significantly."</p>
-                    <div class="testimonial-author">
-                        <strong>Emma Williams</strong>
-                        <span>Marketing Manager, Retail</span>
+                        <strong>Tshwane Shawa</strong>
+                        <span>Business Owner</span>
                     </div>
                 </div>
             </div>
@@ -140,18 +136,18 @@
                 </div>
                 <form class="contact-form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" id="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject">
+                        <input type="text" id="subject" placeholder="Subject">
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <button type="submit" onclick="sendMail()" class="submit-button">Send Message</button>
                 </form>
             </div>
         </div>
@@ -161,12 +157,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Your Name. All rights reserved.</p>
+                <p>&copy; 2026 Thomas Lungu. All rights reserved.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link">LinkedIn</a>
-                    <a href="#" class="social-link">GitHub</a>
-                    <a href="#" class="social-link">Twitter</a>
-                    <a href="#" class="social-link">Dribbble</a>
+                    <a href="https://github.com/tomyxlungu" class="social-link">GitHub</a>
+                    <a href="https://web.facebook.com/profile.php?id=61586979680314" class="social-link">Facebook</a>
                 </div>
             </div>
         </div>

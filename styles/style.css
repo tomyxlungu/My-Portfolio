@@ -249,7 +249,7 @@ section {
 }
 
 .project-image {
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
     background: #f5f5f5;
     border: 1px solid #000;
     margin-bottom: 20px;
@@ -274,6 +274,15 @@ section {
 .project-info h3 {
     font-size: 1.3rem;
     margin-bottom: 8px;
+}
+
+.project-info h3 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-info h3 a:hover {
+    text-decoration: underline;
 }
 
 .project-info p {
@@ -541,8 +550,7 @@ section {
 
 .project-item,
 .testimonial-item,
-.skill-item,
-.section-title {
+.skill-item {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

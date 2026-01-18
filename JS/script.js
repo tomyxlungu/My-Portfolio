@@ -169,3 +169,18 @@ if (ctaButton) {
 window.addEventListener('load', () => {
     highlightNavigation();
 });
+
+function sendMail() {
+    let params = {
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        subject : document.getElementById("subject").value,
+        message : document.getElementById("message").value
+    };
+
+    emailjs.send("service_5ncrwfb","template_vu42igy",params).then(function(response) {
+        alert("Success! Your message has been sent successfully.");
+    }, function(error) {
+        alert("Error! Something went wrong.");
+    });
+}
